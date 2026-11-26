@@ -170,8 +170,8 @@ a.cl:hover .ci em{transform:translateX(4px)}
 .lg img{height:100%;width:auto;max-width:160px;object-fit:contain}
 .lg.lt{background:#fff;color:#14104A}.lg.dk{background:#14104A;color:#fff;border:1px solid var(--ln)}
 .ct{padding:12px 8px 0}.ct b{display:block;font:700 20px var(--d);letter-spacing:-.02em}.ct span{color:var(--mu);font-size:13.5px}
-.scr.lw{display:flex;align-items:center;justify-content:center;padding:18px;font:800 22px var(--d);text-align:center}
-.scr.lw img{max-width:72%;max-height:68%;object-fit:contain}
+.scr.lw{position:relative;min-height:0;overflow:hidden;display:flex;align-items:center;justify-content:center;padding:18px;font:800 22px var(--d);text-align:center}
+.scr.lw img{position:absolute;top:18px;left:18px;width:calc(100% - 36px);height:calc(100% - 36px);max-width:none;max-height:none;object-fit:contain}
 .scr.lt{background:#fff;color:#14104A}
 .scr.gd{background:linear-gradient(135deg,var(--a1),var(--a2));color:#fff}
 .ci{padding:16px 8px 0}.ct{padding:0}
