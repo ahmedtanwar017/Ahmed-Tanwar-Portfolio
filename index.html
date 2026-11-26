@@ -140,6 +140,24 @@ ul.dt{list-style:none;margin:0;padding:0;display:grid;gap:10px}
 .fb a{text-decoration:none}.fb a:hover{color:#fff}
 .rv{opacity:0;transform:translateY(34px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);transition-delay:var(--dl,0s)}
 .rv.in{opacity:1;transform:none}
+.cs.w12{grid-column:span 12}
+.cl{padding:14px 14px 18px;border-radius:22px}
+.shot{border-radius:14px;overflow:hidden;border:1px solid var(--ln);background:#0b0d2b;aspect-ratio:16/10;display:flex;flex-direction:column}
+.shot img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+.bar{display:flex;align-items:center;gap:6px;padding:8px 12px;background:rgba(255,255,255,.07)}
+.bar i{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.3)}
+.bar span{margin-left:10px;font-size:11px;color:var(--mu);background:rgba(0,0,0,.3);padding:2px 12px;border-radius:99px}
+.scr{flex:1;padding:12px;display:grid;gap:8px;align-content:start}
+.nv{display:flex;align-items:center;gap:8px}
+.nv b{width:34px;height:8px;border-radius:4px;background:linear-gradient(90deg,var(--a1),var(--a2));margin-right:auto}
+.nv span{width:22px;height:5px;border-radius:3px;background:rgba(255,255,255,.2)}
+.hh{border-radius:10px;padding:14px;background:linear-gradient(135deg,var(--a1),var(--a2));display:grid;gap:6px;min-height:84px;align-content:center}
+.hh u{display:block;height:9px;border-radius:5px;background:rgba(255,255,255,.92);width:70%}
+.hh u+u{width:45%;opacity:.7}
+.hh s{display:block;width:54px;height:14px;border-radius:99px;background:#fff;margin-top:4px}
+.gr{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.gr b{height:34px;border-radius:8px;background:rgba(255,255,255,.08);border-top:3px solid var(--a1)}
+.ci{padding:16px 8px 0}.ci b{display:block;font:700 20px var(--d);letter-spacing:-.02em}.ci span{color:var(--mu);font-size:13.5px}
 @media (max-width:960px){.hg,.ex{grid-template-columns:1fr;gap:36px}.lk{display:none}.st{grid-template-columns:1fr 1fr}.st div:nth-child(3){border-left:0}.st div:nth-child(n+3){border-top:1px solid var(--ln)}.cs,.cs.w7,.cs.w5{grid-column:span 12}.cg,.tk{grid-template-columns:1fr 1fr}.sv div{grid-template-columns:70px 1fr}.sv p{grid-column:2}.stk{position:static}section{padding-top:64px}.cb{border-radius:32px}}
 @media (max-width:600px){.w{padding:0 20px}.cg,.tk{grid-template-columns:1fr}.nr .bt:not(.p){display:none}.tr{gap:14px;padding:12px 16px}.tr .lb{padding-right:14px;font-size:11px}.mq b{font-size:16px;padding:0 16px}.cs{padding:24px}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}.ln{stroke-dashoffset:0}}
@@ -149,9 +167,9 @@ ul.dt{list-style:none;margin:0;padding:0;display:grid;gap:10px}
 <div id="pg"></div>
 <div class="au" aria-hidden="true"><i></i><i></i><i></i></div>
 <header><div class="w"><nav aria-label="Main">
-<a class="logo" href="#top">Ahmed<b> Tanwar</b></a>
+<a class="logo" href="#top">Ahmed<b>Tanwar</b></a>
 <div class="lk"><a href="#work">Work</a><a href="#services">Services</a><a href="#experience">Experience</a><a href="#toolkit">Toolkit</a></div>
-<div class="nr"><a class="bt sm" href="Resume_Ahmed_Tanwar_1.pdf" download>Download CV</a><a class="bt sm p" href="#contact">Contact</a></div>
+<div class="nr"><a class="bt sm" href="Resume_Ahmed_Tanwar.pdf" download="Ahmed_Tanwar_CV.pdf">Download CV</a><a class="bt sm p" href="#contact">Contact</a></div>
 </nav></div></header>
 
 <main id="top">
@@ -161,7 +179,7 @@ ul.dt{list-style:none;margin:0;padding:0;display:grid;gap:10px}
 <div class="chip rv"><i>AT</i>Mohammed Ahmed Tanwar · Mumbai<u></u></div>
 <h1 class="rv" style="--dl:.08s"><span class="bd">I build products,</span><i class="g">and get them found.</i></h1>
 <p class="ld rv" style="--dl:.16s">Full-stack developer (React, Node.js, MongoDB) and SEO/AEO specialist at WebStarkFX. Computer Engineering graduate, B.E. 2026.</p>
-<div class="cta rv" style="--dl:.24s"><a class="bt p" href="#contact">Let’s work together</a><a class="bt" href="#work">View work</a><a class="bt" href="Resume_Ahmed_Tanwar_1.pdf" download>Download CV</a></div>
+<div class="cta rv" style="--dl:.24s"><a class="bt p" href="#contact">Let’s work together</a><a class="bt" href="#work">View work</a><a class="bt" href="Resume_Ahmed_Tanwar.pdf" download="Ahmed_Tanwar_CV.pdf">Download CV</a></div>
 </div>
 <div class="mock rv" style="--dl:.3s" aria-hidden="true"><div class="mc" id="tilt">
 <div class="mq1"><em>const</em> dev = {<br>&nbsp;&nbsp;stack: <s>"MERN + Next.js"</s>,<br>&nbsp;&nbsp;search: <s>"SEO · AEO · GEO"</s><br>};</div>
@@ -169,17 +187,17 @@ ul.dt{list-style:none;margin:0;padding:0;display:grid;gap:10px}
 <div class="ch"><small>Organic visibility</small><svg viewBox="0 0 400 120"><defs><linearGradient id="lg" x1="0" x2="1"><stop offset="0" stop-color="#7C6CFF"/><stop offset="1" stop-color="#2DE2E6"/></linearGradient></defs><path class="ln" d="M4 108 C60 104 90 96 130 84 S200 70 240 48 S330 14 396 6" fill="none" stroke="url(#lg)" stroke-width="4" stroke-linecap="round"/></svg></div>
 </div></div>
 </div>
-<div class="tr rv" style="--dl:.4s"><div class="lb">Clients</div><div class="mq" aria-label="Clients"><div><b>Dess Digital</b><b>JMR Infotech</b><b>JMR Infrasolutions</b><b>Hublvu.ai</b><b>PictovertAds</b><b>Blinkit</b><b>Dess Digital</b><b>JMR Infotech</b><b>JMR Infrasolutions</b><b>Hublvu.ai</b><b>PictovertAds</b><b>Blinkit</b></div></div></div>
+<div class="tr rv" style="--dl:.4s"><div class="lb">Clients</div><div class="mq" aria-label="Clients"><div><b>JMR Infotech</b><b>JMR Infrasolutions</b><b>Hublvu.ai</b><b>PictovertAds</b><b>Blinkit</b><b>JMR Infotech</b><b>JMR Infrasolutions</b><b>Hublvu.ai</b><b>PictovertAds</b><b>Blinkit</b></div></div></div>
 <div class="st rv">
 <div><b data-n="3" data-s="">0</b><span>production projects shipped</span></div>
-<div><b data-n="6" data-s="">0</b><span>clients served</span></div>
+<div><b data-n="5" data-s="">0</b><span>clients served</span></div>
 <div><b data-n="20" data-s="-pt">0</b><span>SEO audit checklist</span></div>
 <div><b>7.5</b><span>CGPA, B.E. Computer Engineering</span></div>
 </div>
 </div></section>
 
 <section id="work"><div class="w">
-<div class="sh"><h2 class="rv">Selected <span class="g">work</span></h2><p class="sub rv">Real products used by real people, from payments to safety to multilingual SEO.</p></div>
+<div class="sh"><h2 class="rv">Selected <span class="g">work</span></h2><p class="sub rv">Real products used by real people, from payments to safety, plus live client websites.</p></div>
 <div class="fc">
 <article class="sp cs w7 rv"><div class="tp"><span class="tag">Full stack · Fees</span><span class="yr">Live demo</span></div>
 <h3>SchoolPay</h3><p class="rl">React.js · Node.js · Express · MongoDB Atlas</p>
@@ -187,21 +205,18 @@ ul.dt{list-style:none;margin:0;padding:0;display:grid;gap:10px}
 <article class="sp cs w5 rv" style="--dl:.1s"><div class="tp"><span class="tag">Full stack · Payments</span><span class="yr">Live demo</span></div>
 <h3>Society Maintenance System</h3><p class="rl">React.js · Firebase · Razorpay · Node.js</p>
 <ul class="dt"><li>One platform for maintenance payments and resident records.</li><li>Razorpay payments, Firebase auth and real-time data, with admin and resident roles.</li><li>Live on Vercel for an active housing society.</li></ul></article>
-<article class="sp cs rv"><div class="tp"><span class="tag">Mobile · Safety</span><span class="yr">GitHub</span></div>
+<article class="sp cs w12 rv"><div class="tp"><span class="tag">Mobile · Safety</span><span class="yr">GitHub</span></div>
 <h3>ShieldHub</h3><p class="rl">React Native · Node.js · Express · MongoDB</p>
 <ul class="dt"><li>Safety app for women, children and elderly users with one-tap SOS alerts that send live location to trusted contacts.</li><li>Real-time tracking and quick access to nearby police stations, hospitals and emergency services.</li></ul></article>
-<article class="sp cs rv" style="--dl:.1s"><div class="tp"><span class="tag">SEO · WordPress</span><span class="yr">Live site</span></div>
-<h3>Dess Digital</h3><p class="rl">WordPress · WPML · RB2B · Search Console · Lighthouse · GA4</p>
-<ul class="dt"><li>Multilingual site with language switcher, translated URLs and hreflang so each version indexes correctly.</li><li>Technical audit of crawlability, indexation, duplicates and canonicals, with high-impact fixes shipped.</li><li>Core Web Vitals improved through image compression, caching and script optimization.</li><li>RB2B integrated to identify B2B visitors for lead generation.</li></ul></article>
+
 </div>
-<div class="ch3 rv"><h3>Client websites and programs</h3></div>
+<div class="ch3 rv"><h3>Client websites</h3></div>
 <div class="cg">
-<div class="sp cc rv"><small>SEO · WordPress</small><b>Dess Digital</b><span>Multilingual build and technical SEO</span></div>
-<div class="sp cc rv"><small>Web development</small><b>JMR Infotech</b><span>Production React.js UI</span></div>
-<div class="sp cc rv"><small>Web development</small><b>JMR Infrasolutions</b><span>Production React.js UI</span></div>
-<div class="sp cc rv"><small>Client</small><b>Hublvu.ai</b><span>WebStarkFX client</span></div>
-<div class="sp cc rv"><small>Client</small><b>PictovertAds</b><span>WebStarkFX client</span></div>
-<div class="sp cc rv"><small>Client</small><b>Blinkit</b><span>WebStarkFX client</span></div>
+<div class="sp cl rv" style="--a1:#1d4ed8;--a2:#38bdf8"><div class="shot"><div class="bar"><i></i><i></i><i></i><span>JMR Infotech</span></div><div class="scr"><div class="nv"><b></b><span></span><span></span><span></span></div><div class="hh"><u></u><u></u><s></s></div><div class="gr"><b></b><b></b><b></b></div></div></div><div class="ci"><b>JMR Infotech</b><span>Production React.js UI</span></div></div>
+<div class="sp cl rv" style="--a1:#b45309;--a2:#fbbf24"><div class="shot"><div class="bar"><i></i><i></i><i></i><span>JMR Infrasolutions</span></div><div class="scr"><div class="nv"><b></b><span></span><span></span><span></span></div><div class="hh"><u></u><u></u><s></s></div><div class="gr"><b></b><b></b><b></b></div></div></div><div class="ci"><b>JMR Infrasolutions</b><span>Production React.js UI</span></div></div>
+<div class="sp cl rv" style="--a1:#7c3aed;--a2:#ec4899"><div class="shot"><div class="bar"><i></i><i></i><i></i><span>Hublvu.ai</span></div><div class="scr"><div class="nv"><b></b><span></span><span></span><span></span></div><div class="hh"><u></u><u></u><s></s></div><div class="gr"><b></b><b></b><b></b></div></div></div><div class="ci"><b>Hublvu.ai</b><span>WebStarkFX client</span></div></div>
+<div class="sp cl rv" style="--a1:#db2777;--a2:#f97316"><div class="shot"><div class="bar"><i></i><i></i><i></i><span>PictovertAds</span></div><div class="scr"><div class="nv"><b></b><span></span><span></span><span></span></div><div class="hh"><u></u><u></u><s></s></div><div class="gr"><b></b><b></b><b></b></div></div></div><div class="ci"><b>PictovertAds</b><span>WebStarkFX client</span></div></div>
+<div class="sp cl rv" style="--a1:#F8CB46;--a2:#0C831F"><div class="shot"><div class="bar"><i></i><i></i><i></i><span>Blinkit</span></div><div class="scr"><div class="nv"><b></b><span></span><span></span><span></span></div><div class="hh"><u></u><u></u><s></s></div><div class="gr"><b></b><b></b><b></b></div></div></div><div class="ci"><b>Blinkit</b><span>WebStarkFX client</span></div></div>
 </div>
 </div></section>
 
@@ -240,7 +255,7 @@ ul.dt{list-style:none;margin:0;padding:0;display:grid;gap:10px}
 <div class="cb sp rv"><small>Get in touch</small>
 <h2>Let’s build something <i>worth finding.</i></h2>
 <p>Looking for a full-stack developer or an SEO/AEO specialist? Send a note and I’ll reply soon.</p>
-<div class="cta"><a class="bt wh" href="mailto:ahmedtanwar017@gmail.com">Send an email</a><a class="bt ol" href="Resume_Ahmed_Tanwar_1.pdf" download>Download CV</a></div>
+<div class="cta"><a class="bt wh" href="mailto:ahmedtanwar017@gmail.com">Send an email</a><a class="bt ol" href="Resume_Ahmed_Tanwar.pdf" download="Ahmed_Tanwar_CV.pdf">Download CV</a></div>
 <div class="cl2"><a href="mailto:ahmedtanwar017@gmail.com">ahmedtanwar017@gmail.com</a><a href="tel:+918652318108">+91 86523 18108</a><a href="https://www.linkedin.com/in/mohd-ahmed-tanwar" rel="noopener">LinkedIn</a><a href="https://github.com/ahmed-tanwar" rel="noopener">GitHub</a></div></div>
 <div class="fb"><span>© Mohammed Ahmed Tanwar · Mumbai, India</span><a href="#top">Back to top</a></div>
 </div></footer>
